@@ -80,6 +80,22 @@ body{overflow-x:clip}@media(max-width:760px){.project-grid[data-carousel],.video
 /* Contadores da experiência regional */
 .metrics-section.metrics-pending:not(.metrics-visible) .metrics-grid>div{opacity:.2;transform:translateY(12px);transition:opacity .65s ease,transform .65s ease}.metrics-section.metrics-visible .metrics-grid>div{opacity:1;transform:none}.metrics-section.metrics-visible .metrics-grid>div:nth-child(2){transition-delay:.1s}.metrics-section.metrics-visible .metrics-grid>div:nth-child(3){transition-delay:.2s}.metrics-section.metrics-visible .metrics-grid>div:nth-child(4){transition-delay:.3s}
 @media(prefers-reduced-motion:reduce){.metrics-grid>div{opacity:1;transform:none;transition:none}}
+
+/* Header mobile: CTA textual e menu ancorado à direita */
+@media(max-width:760px){
+  .nav-wrap{position:relative;display:flex;gap:8px}
+  .brand{margin-right:auto;flex:none}
+  .header-quote{margin-left:auto;flex:none;padding:9px 12px;font-size:11px;white-space:nowrap}
+  .header-quote svg{width:17px;height:17px}
+  .menu-toggle{position:relative;z-index:2;grid-column:auto;grid-row:auto;flex:none}
+  .main-nav{top:calc(100% + 6px);right:0;left:auto;width:min(290px,calc(100vw - 32px));border-radius:10px;box-shadow:0 18px 42px rgba(3,10,27,.28);transform-origin:top right}
+}
+@media(max-width:360px){
+  .header-quote{padding-inline:10px;font-size:10px}
+  .header-quote svg{display:none}
+}
+
+.team-story>img{object-position:center 62%}
 /* Amarelo único nos acentos; azul escuro nos textos pequenos sobre fundos claros para contraste */
 :root{--yellow:#FBCE01;--yellow-deep:#FBCE01}
 .nav-cta:hover,.button-yellow:hover{background:#FBCE01}

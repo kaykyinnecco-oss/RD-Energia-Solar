@@ -15,7 +15,7 @@ maintenanceForm?.addEventListener('submit', (event) => {
   if (!maintenanceForm.reportValidity()) return;
   const data = new FormData(maintenanceForm);
   const message = [
-    'Olá! Vim pelo site da RD Energia Solar e gostaria de pedir um orçamento para manutenção.',
+    'Olá! Gostaria de solicitar informações sobre manutenção do meu sistema de energia solar.',
     '',
     `Quantidade de painéis: ${String(data.get('paineis') || '').trim()}.`,
     `Cidade: ${String(data.get('cidade') || '').trim()}.`,
@@ -181,7 +181,7 @@ quoteForm?.addEventListener('submit', (event) => {
     style: 'currency', currency: 'BRL', maximumFractionDigits: 2,
   }).format(bill);
   const message = [
-    'Olá! Vim pelo site da RD Energia Solar e gostaria de solicitar um orçamento para meu imóvel.',
+    'Olá! Vim pelo site da RD Energia Solar e gostaria de receber uma simulação para meu imóvel.',
     '',
     `Meu nome é ${name}, moro em ${city}. Telefone: ${phone}${email ? `; e-mail: ${email}` : ''}.`,
     `Imóvel: ${property}; telhado: ${roof}.`,
